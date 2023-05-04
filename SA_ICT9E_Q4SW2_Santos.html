@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Q4 / Seatwork 1</title>
+</head>
+<body class="bg-success">
+    <br>
+    <div class="container bg-light text-center p-5">
+        <h1 align="center" style="color: skyblue; font: serif;">JavaScript Weather Program</h1>
+        <hr>
+    </head>
+<body>
+    <div class="container">
+        <h2>Philippine Standard Time</h2>
+              <table class="table table-hover table warning" border="3" >
+      <thead>
+      	  <tr>
+      	  	<th scope="col" class="bg-primary">Fahrenheit (0F)</th>
+      	  	<th scope="col" class="bg-warning">Celsius (0C)</th>
+      	  	<th scope="col" class="bg-warning">Description</th>
+      	  </tr>
+      </thead>
+      <tbody>
+      	<tr>
+      	  <td> &nbsp;-273.15</td>
+      	  <td>-459.67</td>
+      	  <td>Absolute zero temperature</td>
+      	 </tr>
+      	 <tr>
+      	  <td> &nbsp;0</td>
+      	  <td>32.0</td>
+      	  <td>Freezing/melting point of water</td>
+      	 </tr>
+      	 <tr>
+      	  <td> &nbsp;21</td>
+      	  <td>69.8</td>
+      	  <td>Room temperature</td>
+      	 </tr>
+      	 <tr>
+      	  <td> &nbsp;37</td>
+      	  <td>98.6</td>
+      	  <td>Average body temperature</td>
+      	 </tr>
+      	 <tr>
+      	  <td> &nbsp;100 </td>
+      	  <td>212.0</td>
+      	  <td>Boiling point of water</td>
+      	 </tr>
+
+         <p id="today"></p>
+
+          <script>
+         const date = new Date();
+         document.getElementById("today").innerHTML = date;
+        </script>
+            <p>
+      <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="0F"
+     oninput="temperatureConverter(this.value)"
+    onchange="temperatureConverter(this.value)">
+</p>
+<p>Celsius: <span id="outputCelsius"></span></p>
+<script>
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;
+}  
+        </script>     
+      </tbody>
+     </table>
+    </div>
+</body>
+</html>    
+   
